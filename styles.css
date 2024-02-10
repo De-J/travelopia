@@ -43,14 +43,18 @@ button:hover {
     border: 1px solid #4096FF;
 }
 
+
 img {
-    max-width: 100%;
-    height: auto;
-
     /* removes gap below image due to descendants */
+    height: var(--height);
+    width: 100vw;
     display: block;
-
+    max-width: 100%;
+    max-height: var(--height);
+    min-height: var(--height);
+    object-fit: fill;
 }
+
 
 header,
 footer {
