@@ -1,15 +1,21 @@
-/* @font-face {
-    font-family: "Segoe UI";
-    src: url(./assets/Segoe_UI.ttf) format("truetype");
-} */
-
 :root {
+    /*  Last parameter of rgb specifies the transparency.  */
+    --g1: rgb(98, 0, 234, 0);
+    --g2: rgb(236, 64, 122, 0);
+    --g3: rgb(253, 216, 53, 0);
+    --height: calc(100vh - 200px);
     font-family: "Segoe UI";
 }
 
 * {
     padding: 0;
     margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -20,7 +26,16 @@ button {
     padding: 0.25rem;
     color: black;
     background-color: white;
-    transition: border 0.5s, color 0.5s;  
+    transition: border 0.5s, color 0.5s;
+}
+
+section {
+    /*
+    Parent needs to have position: relative so that
+    child elements with position: absolute inside it can be positioned according to it's boundary.
+    */
+    position: relative;
+    flex-grow: 1;
 }
 
 button:hover {
@@ -44,5 +59,24 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #B9BBB6;
-    height: 100px;  
+    height: 100px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    /*   In order for a child element to be positioned 0px from both top and bottom boundaries of its parent element, it needs to have the height of it's parent. Top, bottom and width in the previous sentence can be replaced with left, right and width respectively. */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: linear-gradient(0deg,
+            var(--g1) 0% 5%,
+            var(--g2) 60%,
+            var(--g3) 100%);
 }
