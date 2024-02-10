@@ -80,3 +80,15 @@ footer {
             var(--g2) 60%,
             var(--g3) 100%);
 }
+
+div#container::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+}
+
+.color {
+    --g1: rgb(98, 0, 234, 0.2);
+    --g2: rgb(236, 64, 122, 0.2);
+    --g3: rgb(253, 216, 53, 0.2);
+}
