@@ -1,0 +1,48 @@
+/* @font-face {
+    font-family: "Segoe UI";
+    src: url(./assets/Segoe_UI.ttf) format("truetype");
+} */
+
+:root {
+    font-family: "Segoe UI";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    border: 1px solid #D9D9D9;
+    cursor: pointer;
+    font: inherit;
+    border-radius: 6px;
+    padding: 0.25rem;
+    color: black;
+    background-color: white;
+    transition: border 0.5s, color 0.5s;  
+}
+
+button:hover {
+    color: #1677FF;
+    border: 1px solid #4096FF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    /* removes gap below image due to descendants */
+    display: block;
+
+}
+
+header,
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #B9BBB6;
+    height: 100px;  
+}
